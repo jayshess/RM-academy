@@ -10,12 +10,15 @@ class GfCard < Card
 
   attr_reader :rank
 
+  def ranks
+    @@ranks
+  end
 
   def has_rank?(test_rank)
      rank == test_rank
   end
 
-  def xits_text_value
+  def rank_to_num
     (ranks.index(rank)+2)
   end
 

@@ -1,6 +1,6 @@
 #require File.join(File.dirname(__FILE__), '.' ,'card.rb')
-load '../gf_card.rb'
-load '../deck_of_cards.rb'
+require_relative 'gf_card.rb'
+require_relative 'deck_of_cards.rb'
 
 class GfDeckOfCards < DeckOfCards
 
@@ -18,4 +18,13 @@ class GfDeckOfCards < DeckOfCards
     @all_cards.shuffle!
   end
 
+
+  def load_with (array_of_card_names)
+      say "Loading deck with ..."
+    array_of_card_names.each {|name| say name; @all_cards << GfCard.new(name)}
+  end
+
+  def say(x)
+    puts x
+  end
 end

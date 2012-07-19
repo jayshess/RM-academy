@@ -1,5 +1,6 @@
 
-load '../card.rb'
+#load '../card.rb'
+require_relative 'card.rb'
 
 class GfCard < Card
 
@@ -23,9 +24,13 @@ class GfCard < Card
   end
 
   def equivalent_to other
-    return super == other unless other.class == self.class
+    return true if self==nil && other == nil
+    return false if self == nil || other == nil
     rank == other.rank && suit == other.suit
   end
 
+  def to_s
+    "#{rank} - #{suit}"
+  end
 
 end

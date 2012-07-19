@@ -1,5 +1,6 @@
 #require File.join(File.dirname(__FILE__), '.' ,'card.rb')
-load '../card.rb'
+require_relative 'card.rb'
+
 
 class DeckOfCards
 
@@ -36,7 +37,7 @@ class DeckOfCards
   end
 
   def load_with (array_of_card_names)
-    array_of_card_names.each {|name| @all_cards << GfCard.new(name)}
+    array_of_card_names.each {|name| @all_cards << Card.new(name)}
   end
 
 end

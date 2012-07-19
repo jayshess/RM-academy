@@ -1,8 +1,8 @@
 
 #require File.join(File.dirname(__FILE__), '.' ,'deck_of_cards.rb')
 #require File.join(File.dirname(__FILE__), '.' ,'player.rb')
-load '../deck_of_cards.rb'
-load '../player.rb'
+require_relative 'deck_of_cards.rb'
+require_relative 'player.rb'
 
 class Game
 
@@ -52,12 +52,7 @@ class Game
     @players[i]
   end
 
-  def index_of_this_player(n)
-    n-1
-  end
 
-  def player (whole_number)
-     @players[index_of_this_player(whole_number)]
-  end
+
 
 end

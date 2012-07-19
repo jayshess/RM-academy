@@ -1,0 +1,41 @@
+
+<p>
+    There are 4 players including YOU.
+</p>
+
+<form  name="goFishLayout" action="process_page" method="GET"   >
+
+<table align="LEFT" width="50%" bgcolor="">
+<tr>
+    <td>
+        <table>
+            <tr>
+                <td>
+                    <p></p><%= "Cards belonging to #{params[:name]}" %> </p>
+                    <p>
+                      <%= "... #{@stuff}" %>
+                    </p>
+                    <p>Pick a card</p>
+                    <br/>
+                    <input type="RADIO" name="mycards" value="Ace" >  $rank $suit <br/>
+                </td>
+            </tr>
+        </table>
+
+    </td>
+    <td>
+        <table>
+            <tr>
+                <td>
+                    <p>Other players</p>
+                    <p>Pick another player to ask</p>
+                    <br/>
+                        <input type="RADIO" name="other Players" value="P0" >  Player 1 <br/>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+</table>
+
+ </form>
